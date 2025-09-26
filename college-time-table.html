@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classwork Mergering Table Cells</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #d1d0d0;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .table {
+      table-layout: fixed;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    th,
+    td {
+      width: 150px;
+      white-space: nowrap;
+    }
+
+    td[colspan] {
+      background-color: rgb(241, 177, 177);
+    }
+
+    td[rowspan] {
+      background-color: rgb(212, 243, 202);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div>
+      <h1 class="heading">College Time Table</h1>
+    </div>
+
+    <div class="table">
+      <table border="1" cellpadding="5">
+        <thead>
+          <tr>
+            <th>Day/Period</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>Break</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Monday</th>
+            <td>Math</td>
+            <td>Drawing</td>
+            <td>Physics</td>
+            <td>Lunch</td>
+            <td>Lab</td>
+            <td>Lab</td>
+            <td>Sports</td>
+            <td>Sports</td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td>Chemistry</td>
+            <td>English</td>
+            <td>Math</td>
+            <td>Lunch</td>
+            <td>Physics</td>
+            <td>Lab</td>
+            <td>Lab</td>
+            <td>Lab</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td>Chemistry</td>
+            <td>Physics</td>
+            <td>Math</td>
+            <td>Lunch</td>
+            <td>Drawing</td>
+            <td>Drawing</td>
+            <!-- <td>Drawing</td> -->
+            <td>Sports</td>
+            <td>Sports</td>
+            <!-- <td>Sports</td> -->
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td>Math</td>
+            <td>Drawing</td>
+            <td>Physics</td>
+            <td>Lunch</td>
+            <td>Lab</td>
+            <td>Lab</td>
+            <!-- <td>Lab</td> -->
+            <td>Sports</td>
+            <td>Sports</td>
+            <!-- <td>Sports</td> -->
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <td>Chemistry</td>
+            <td>English</td>
+            <td>Math</td>
+            <td>Lunch</td>
+            <td>Physics</td>
+            <td>Lab</td>
+            <td>Lab</td>
+            <td>Lab</td>
+            <!-- <td>Lab</td>
+            <td>Lab</td> -->
+          </tr>
+          <tr>
+            <th>Saturday</th>
+            <td>Chemistry</td>
+            <td>Physics</td>
+            <td>Math</td>
+            <td>Lunch</td>
+            <td>Drawing</td>
+            <td>Drawing</td>
+            <td>Sports</td>
+            <td>Sports</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+
+      <table border="1" cellpadding="5">
+        <thead>
+          <tr>
+            <th>Day/Period</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>Break</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Monday</th>
+            <td>Math</td>
+            <td>Drawing</td>
+            <td>Physics</td>
+            <td rowspan="6">Lunch</td>
+            <td colspan="2">Lab</td>
+            <td colspan="2">Sports</td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td rowspan="2">Chemistry</td>
+            <td>English</td>
+            <td rowspan="2">Math</td>
+            <td>Lunch</td>
+            <td>Physics</td>
+            <td colspan="3">Lab</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <!-- <td>Chemistry</td> -->
+            <td>Physics</td>
+            <!-- <td>Math</td> -->
+            <td>Lunch</td>
+            <td colspan="2">Drawing</td>
+            <!-- <td>Drawing</td> -->
+            <td colspan="2">Sports</td>
+            <!-- <td>Sports</td> -->
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td>Math</td>
+            <td>Drawing</td>
+            <td>Physics</td>
+            <td>Lunch</td>
+            <td colspan="2">Lab</td>
+            <!-- <td>Lab</td> -->
+            <td colspan="2">Sports</td>
+            <!-- <td>Sports</td> -->
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <td rowspan="2">Chemistry</td>
+            <td>English</td>
+            <td rowspan="2">Math</td>
+            <td>Lunch</td>
+            <td>Physics</td>
+            <td colspan="3">Lab</td>
+            <!-- <td>Lab</td>
+            <td>Lab</td> -->
+          </tr>
+          <tr>
+            <th>Saturday</th>
+            <!-- <td>Chemistry</td> -->
+            <td>Physics</td>
+            <!-- <td>Math</td> -->
+            <td>Lunch</td>
+            <td colspan="2">Drawing</td>
+            <!-- <td>Drawing</td> -->
+            <td colspan="2">Sports</td>
+            <!-- <td>Sports</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>
